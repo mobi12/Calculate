@@ -1,6 +1,6 @@
 ﻿namespace Calculate
 {
-    public abstract class Opreator
+    public class Opreator
     {
         protected double _num1;
         protected double _num2;
@@ -21,6 +21,9 @@
             }
         }
 
-        public abstract double GetResult();
+        public virtual double GetResult()
+        {
+            return 0;
+        }
     }
 }

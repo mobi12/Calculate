@@ -27,28 +27,29 @@
             <ColumnDefinition Width="151" />
             <ColumnDefinition Width="89" />
             <ColumnDefinition Width="108" />
+            <ColumnDefinition Width="0" />
         </Grid.ColumnDefinitions>
         <materialDesign:Card Height="90" Grid.ColumnSpan="3">
-            <TextBlock Name="answerWindow" Style="{DynamicResource MaterialDesignTitleTextBlock}" Margin="0,0,0,40" HorizontalAlignment ="Right" Width="348" Height="50"></TextBlock>
+            <TextBlock Name="answerWindow" Style="{DynamicResource MaterialDesignTitleTextBlock}" FontSize="24" TextAlignment="Right" Margin="0,0,10,0" />
         </materialDesign:Card>
-        <Button Name="sign" Content="+/-" Margin="81,8,8,9" Grid.Row="1" />
-        <Button Name="div" Content="÷" Margin="3,8,10,9" Grid.Column="2" Grid.Row="1" Click="div_Click" />
-        <Button Name="about" Content="about" Margin="11,8,16,9" Grid.Column="1" Grid.Row="1" Click="about_Click" />
-        <Button Name="num7" Content="7" Margin="0,13,89,7" Grid.Row="2" Click="num7_Click" />
-        <Button Name="num8" Content="8" Margin="81,13,8,7" RenderTransformOrigin="0.554,0.448" Grid.Row="2" Click="num8_Click" />
-        <Button Name="num9" Content="9" Margin="11,13,16,7" Grid.Column="1" Grid.Row="2" Click="num9_Click" />
-        <Button Name="mul" Content="x" Margin="3,13,10,7" Grid.Column="2" Grid.Row="2" Click="mul_Click" />
-        <Button Name="num4" Content="4" Margin="0,17,89,6" Grid.Row="3" Click="num4_Click" />
-        <Button Name="num5" Content="5" Margin="81,17,8,6" Grid.Row="3" Click="num5_Click" />
-        <Button Name="num6" Content="6" Margin="11,17,16,6" Grid.Column="1" Grid.Row="3" Click="num6_Click" />
-        <Button Name="sub" Content="-" Margin="3,17,10,6" Grid.Column="2" Grid.Row="3" Click="sub_Click" />
-        <Button Name="num1" Content="1" Margin="0,16,89,6" Grid.Row="4" Click="num1_Click" />
-        <Button Name="num2" Content="2" Margin="81,16,8,6" Grid.Row="4" Click="num2_Click" />
-        <Button Name="num3" Content="3" Margin="11,16,16,6" Grid.Column="1" Grid.Row="4" Click="num3_Click" />
-        <Button Name="add" Content="+" Margin="3,16,10,6" Grid.Column="2" Grid.Row="4" Click="add_Click" />
-        <Button Name="num0" Content="0" Margin="0,18,8,10.566" Grid.Row="5" Click="num0_Click" />
-        <Button Name="dot" Content="." Margin="11,18,16,10.566" Grid.Column="1" Grid.Row="5" />
-        <Button Name="result" Content="=" Margin="3,18,10,10.566" Grid.Column="2" Grid.Row="5" Click="result_Click" />
-        <Button Name="clear" Content="C" Margin="0,8,89,9" Grid.Row="1" Click="clear_Click"></Button>
+        <Button Name="sign" Content="+/-" Margin="81,8,8,9" Grid.Row="1" Height="Auto" />
+        <Button Name="div" Content="÷" Margin="3,8,5,9" Grid.Column="2" Grid.Row="1" Click="div_Click" Height="Auto" />
+        <Button Name="about" Content="about" Margin="11,8,16,9" Grid.Column="1" Grid.Row="1" Click="about_Click" Height="Auto" />
+        <Button Name="num7" Content="7" Margin="0,13,89,7" Grid.Row="2" Click="num7_Click" Height="Auto" />
+        <Button Name="num8" Content="8" Margin="81,13,8,7" RenderTransformOrigin="0.554,0.448" Grid.Row="2" Click="num8_Click" Height="Auto" />
+        <Button Name="num9" Content="9" Margin="11,13,16,7" Grid.Column="1" Grid.Row="2" Click="num9_Click" Height="Auto" />
+        <Button Name="mul" Content="x" Margin="3,13,5,7" Grid.Column="2" Grid.Row="2" Click="mul_Click" Height="Auto" />
+        <Button Name="num4" Content="4" Margin="0,17,89,6" Grid.Row="3" Click="num4_Click" Height="Auto" />
+        <Button Name="num5" Content="5" Margin="81,17,8,6" Grid.Row="3" Click="num5_Click" Height="Auto" />
+        <Button Name="num6" Content="6" Margin="11,17,16,6" Grid.Column="1" Grid.Row="3" Click="num6_Click" Height="Auto" />
+        <Button Name="sub" Content="-" Margin="3,17,5,6" Grid.Column="2" Grid.Row="3" Click="sub_Click" Height="Auto" />
+        <Button Name="num1" Content="1" Margin="0,16,89,6" Grid.Row="4" Click="num1_Click" Height="Auto" />
+        <Button Name="num2" Content="2" Margin="81,16,8,6" Grid.Row="4" Click="num2_Click" Height="Auto" />
+        <Button Name="num3" Content="3" Margin="11,16,16,6" Grid.Column="1" Grid.Row="4" Click="num3_Click" Height="Auto" />
+        <Button Name="add" Content="+" Margin="3,16,5,6" Grid.Column="2" Grid.Row="4" Click="add_Click" Height="Auto" />
+        <Button Name="num0" Content="0" Margin="0,18,8,11" Grid.Row="5" Click="num0_Click" Height="Auto" />
+        <Button Name="dot" Content="." Margin="11,18,16,11" Grid.Column="1" Grid.Row="5" Height="Auto" />
+        <Button Name="result" Content="=" Margin="3,18,5,11" Grid.Column="2" Grid.Row="5" Click="result_Click" Height="Auto" />
+        <Button Name="clear" Content="C" Margin="0,8,89,9" Grid.Row="1" Click="clear_Click" Height="Auto"></Button>
     </Grid>
 </Window>

@@ -82,7 +82,7 @@ namespace Calculate
             int isNumber = 0;
             int.TryParse($"{answerWindow.Text[answerWindow.Text.Length - 1]}", out isNumber);
 
-            if (isNumber == 1)
+            if (isNumber > 0)
             {
                 answerWindow.Text += '+';
             }
@@ -97,7 +97,7 @@ namespace Calculate
             int isNumber = 0;
             int.TryParse($"{answerWindow.Text[answerWindow.Text.Length - 1]}", out isNumber);
 
-            if (isNumber == 1)
+            if (isNumber > 0)
             {
                 answerWindow.Text += '-';
             }
@@ -112,7 +112,7 @@ namespace Calculate
             int isNumber = 0;
             int.TryParse($"{answerWindow.Text[answerWindow.Text.Length - 1]}", out isNumber);
 
-            if (isNumber == 1)
+            if (isNumber > 0)
             {
                 answerWindow.Text += 'x';
             }
@@ -127,7 +127,7 @@ namespace Calculate
             int isNumber = 0;
             int.TryParse($"{answerWindow.Text[answerWindow.Text.Length - 1]}", out isNumber);
 
-            if (isNumber == 1)
+            if (isNumber > 0)
             {
                 answerWindow.Text += '÷';
             }
@@ -150,19 +150,42 @@ namespace Calculate
         private void result_Click(object sender, RoutedEventArgs e)
         {
             int isNumber = 0;
-            int.TryParse($"{answerWindow.Text[answerWindow.Text.Length - 1]}", out isNumber);
-            char[] tokens = { '+', '-', 'x', '÷' };
+            double result = 0;
+            char[] splitRules = { '+', '-', 'x', '÷' };
+            string[] number = answerWindow.Text.Split(splitRules);
+            double[] numberElement = new double[number.Length];
+            List<char> tokenList = new List<char>();
 
-            if (isNumber == 1)
+            if (answerWindow.Text == String.Empty)
             {
-                string[] number = answerWindow.Text.Split(tokens);
-                answerWindow.Text = String.Empty;
+                throw new Exception("空的你让人家怎么算啊？");
+            }
 
-                for (int i = 0; i < number.Length; i++)
+            for (int i = 0; i < number.Length; i++)
+            {
+                numberElement[i] = int.Parse(number[i]);
+            }
+
+            for (int i = 0; i < answerWindow.Text.Length; i++)
+            {
+                int.TryParse($"{answerWindow.Text[i]}", out isNumber);
+
+                if (isNumber == 0)
                 {
-                    answerWindow.Text += number[i];
+                    tokenList.Add(answerWindow.Text[i]);
                 }
             }
+
+            for (int i = 0; i < tokenList.Count; i++)
+            {
+                Opreator temp = OpreatorFactory.CreateOpreator(tokenList[i]);
+                temp.Number1 = numberElement[i];
+                temp.Number2 = numberElement[i + 1];
+                numberElement[i + 1] = temp.GetResult();
+                result = numberElement[i + 1];
+            }
+
+            answerWindow.Text = result.ToString();
         }
     }
 }
