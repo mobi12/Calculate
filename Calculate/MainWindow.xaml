@@ -1,0 +1,54 @@
+﻿<Window x:Class="Calculate.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        mc:Ignorable="d"
+        xmlns:materialDesign="http://materialdesigninxaml.net/winfx/xaml/themes"
+        TextElement.Foreground="{DynamicResource MaterialDesignBody}"
+        TextElement.FontWeight="Regular"
+        TextElement.FontSize="13"
+        TextOptions.TextFormattingMode="Ideal"
+        TextOptions.TextRenderingMode="Auto"
+        Background="{DynamicResource MaterialDesignPaper}"
+        FontFamily="{DynamicResource MaterialDesignFont}"
+        Title="Calculate" Height="472.216" Width="355.529">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="98" />
+            <RowDefinition Height="49" />
+            <RowDefinition Height="52" />
+            <RowDefinition Height="55" />
+            <RowDefinition Height="54" />
+            <RowDefinition Height="61" />
+            <RowDefinition Height="72" />
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="151" />
+            <ColumnDefinition Width="89" />
+            <ColumnDefinition Width="108" />
+        </Grid.ColumnDefinitions>
+        <materialDesign:Card Height="90" Grid.ColumnSpan="3">
+            <TextBlock Name="answerWindow" Style="{DynamicResource MaterialDesignTitleTextBlock}" Margin="0,0,0,40" HorizontalAlignment ="Right" Width="348" Height="50"></TextBlock>
+        </materialDesign:Card>
+        <Button Name="sign" Content="+/-" Margin="81,8,8,9" Grid.Row="1" />
+        <Button Name="div" Content="÷" Margin="3,8,10,9" Grid.Column="2" Grid.Row="1" Click="div_Click" />
+        <Button Name="about" Content="about" Margin="11,8,16,9" Grid.Column="1" Grid.Row="1" Click="about_Click" />
+        <Button Name="num7" Content="7" Margin="0,13,89,7" Grid.Row="2" Click="num7_Click" />
+        <Button Name="num8" Content="8" Margin="81,13,8,7" RenderTransformOrigin="0.554,0.448" Grid.Row="2" Click="num8_Click" />
+        <Button Name="num9" Content="9" Margin="11,13,16,7" Grid.Column="1" Grid.Row="2" Click="num9_Click" />
+        <Button Name="mul" Content="x" Margin="3,13,10,7" Grid.Column="2" Grid.Row="2" Click="mul_Click" />
+        <Button Name="num4" Content="4" Margin="0,17,89,6" Grid.Row="3" Click="num4_Click" />
+        <Button Name="num5" Content="5" Margin="81,17,8,6" Grid.Row="3" Click="num5_Click" />
+        <Button Name="num6" Content="6" Margin="11,17,16,6" Grid.Column="1" Grid.Row="3" Click="num6_Click" />
+        <Button Name="sub" Content="-" Margin="3,17,10,6" Grid.Column="2" Grid.Row="3" Click="sub_Click" />
+        <Button Name="num1" Content="1" Margin="0,16,89,6" Grid.Row="4" Click="num1_Click" />
+        <Button Name="num2" Content="2" Margin="81,16,8,6" Grid.Row="4" Click="num2_Click" />
+        <Button Name="num3" Content="3" Margin="11,16,16,6" Grid.Column="1" Grid.Row="4" Click="num3_Click" />
+        <Button Name="add" Content="+" Margin="3,16,10,6" Grid.Column="2" Grid.Row="4" Click="add_Click" />
+        <Button Name="num0" Content="0" Margin="0,18,8,10.566" Grid.Row="5" Click="num0_Click" />
+        <Button Name="dot" Content="." Margin="11,18,16,10.566" Grid.Column="1" Grid.Row="5" />
+        <Button Name="result" Content="=" Margin="3,18,10,10.566" Grid.Column="2" Grid.Row="5" Click="result_Click" />
+        <Button Name="clear" Content="C" Margin="0,8,89,9" Grid.Row="1" Click="clear_Click"></Button>
+    </Grid>
+</Window>
